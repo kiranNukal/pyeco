@@ -6,7 +6,6 @@ kiwisolver==1.4.9
 lightgbm==4.5.0
 matplotlib==3.10.1
 numpy==1.26.4
-openblas==0.3.29
 packaging==25.0
 pandas==2.2.3
 pillow==11.2.1

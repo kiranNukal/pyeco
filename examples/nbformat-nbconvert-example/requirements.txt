@@ -31,7 +31,6 @@ nbconvert==7.16.4
 nbformat==5.10.4
 nest-asyncio==1.6.0
 numpy==2.3.1
-openblas==0.3.29
 packaging==25.0
 pandocfilters==1.5.1
 parso==0.8.5

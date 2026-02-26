@@ -20,16 +20,14 @@ DISTRO=$(detect_distro)
 case $DISTRO in
     "fedora"|"rhel"|"centos"|"rocky"|"almalinux")
         if command -v dnf >/dev/null 2>&1; then
-            sudo dnf install -y python3.12 python3.12-devel python3.12-pip gcc-toolset-13 libjpeg-devel cmake
-            source /opt/rh/gcc-toolset-13/enable
+            sudo dnf install -y python3.12 python3.12-devel python3.12-pip
         else
-            sudo yum install -y python3.12 python3.12-devel python3.12-pip gcc-toolset-13 libjpeg-devel cmake
-            source /opt/rh/gcc-toolset-13/enable
+            sudo yum install -y python3.12 python3.12-devel python3.12-pip
         fi
         ;;
     "ubuntu"|"debian")
          sudo apt update
-         sudo apt install -y python3.12 python3.12-dev python3-pip python3.12-venv gcc libjpeg-dev libgfortran5 g++ libjpeg62 camke
+         sudo apt install -y python3.12 python3.12-dev python3-pip python3.12-venv
         ;;
     *)
         echo "Unsupported distribution: $DISTRO"
@@ -46,9 +44,6 @@ pip install --prefer-binary --extra-index-url=https://wheels.developerfirst.ibm.
 
 # Upgrade pip
 pip install --upgrade pip
-
-# Set library path for IBM packages
-export LD_LIBRARY_PATH=./.venv/lib/python3.12/site-packages/openblas/lib:$LD_LIBRARY_PATH
 
 # Run Python scripts
 echo "Running environment test..."

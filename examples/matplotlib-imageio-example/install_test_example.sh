@@ -56,7 +56,7 @@ pip install --upgrade pip
 
 # Run Python scripts
 echo "Running environment test..."
-python3 mpl-example.py
+python3 matplotlib-imageio-example.py
 
 echo " ==== Running sub-test1 ==== "
 python3 sub-test1.py

@@ -4,7 +4,7 @@ fonttools==4.61.1
 ImageIO==2.37.2
 kiwisolver==1.4.9
 matplotlib==3.10.7
-numpy==1.26.4+ppc64le1
+numpy==1.26.4
 packaging==26.0
 pillow==11.3.0
 pyparsing==3.3.2
